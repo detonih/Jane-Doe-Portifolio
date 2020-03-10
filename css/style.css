@@ -8,7 +8,15 @@
 /* Header */
 header {
     text-align: center;
+    /* box-shadow: eixo-x exo-y blur cor; */
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+    background-color: #fff;
     border: 2px solid #ccc;
+    /* header fixo */
+    position:fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
 header h1 {
@@ -17,6 +25,7 @@ header h1 {
 
 nav ul {
     list-style: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -51,6 +60,7 @@ section#songs,
 main#contact {
     width: 900px;
     margin: 30px auto;
+    max-width: 100%;
 }
 
 section#songs img {
@@ -101,6 +111,7 @@ section#songs strong {
 #videos {
     width: 900px;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 /* Contact */
@@ -138,4 +149,128 @@ footer {
     margin: 0;
     background-color: #f2f2f2;
     text-align: center;
+}
+
+/* estilo geral */
+main,
+main#contact,
+main#music {
+    margin-top: 150px;
+}
+
+/* poisicionamento e responsividade */
+
+@media (max-width: 900px) {
+    section#concept,
+    section#songs,
+    main#music,
+    main#contact {
+        padding: 0 40px;
+    }
+
+    nav ul li {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 32px;
+        text-align: center
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        font-size: 24px;
+    }
+
+    .duas-colunas > div {
+        width: 100%;
+    }
+
+    section#songs ol li {
+        font-size: 24px;
+    }
+
+    main#music {
+        padding: 0 40px;
+    }
+
+    main#music iframe {
+        width: 100%;
+    }
+
+    main#music ul li ,
+    main#music p {
+        font-size: 24px;
+    }
+
+    main#music,
+    main#contact {
+        padding: 0 40px;
+    }
+
+    main#contact form,
+    main#contact form input,
+    main#contact form textarea {
+        font-size: 24px;
+    }
+
+    main#contact form .form-group {
+        margin-bottom: 20px;
+    }
+
+    main#contact form button {
+        font-size: 30px;
+        padding: 10 10 10 10px;
+    }
+}
+
+@media (max-width: 375px){
+    section#banner {
+        background-size: cover;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    main#contact form,
+    main#contact form input,
+    main#contact form textarea {
+        font-size: 18px;
+        padding: 10 0 10 0px;
+        margin: 10 0 10 0px;
+    }
+
+    #form-mapa > div.mapa {
+        width: 100%;
+        padding: 0px;
+    }
+
+    main#contact form button {
+        font-size: 24px;
+        padding: 5 5 5 5px;
+    }
+
+    main#music {
+        padding: 0 20px;
+    }
+
+    main#music iframe {
+        width: 100%;
+    }
+
+    main#music ul li ,
+    main#music p {
+        font-size: 20px;
+    }
+
+    main#music,
+    main#contact {
+        padding: 0 20px;
+    }
 }
